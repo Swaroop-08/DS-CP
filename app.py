@@ -6,7 +6,7 @@ from datetime import datetime, date
 import datetime as dt 
 
 # Define the file path for persistence
-EVENTS_FILE_PATH = '/Users/umesh/Downloads/DS-Lab/DSA - CP/AI-Event-Tracker/events_college.json'
+EVENTS_FILE_PATH = '/Users/AI-Event-Tracker/events_college.json'
 
 # Event Model (Class)
 class Event:
