@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendations | {{ interest }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .navbar { background-color: white; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+        .recommended-card { 
+            background: #f1f3ff;
+            border-left: 5px solid #007bff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        .recommended-card:hover {
+            transform: translateY(-3px);
+        }
+        .header-section {
+            background: linear-gradient(45deg, #007bff, #6610f2);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="{{ url_for('home') }}"><i class="fas fa-brain me-2"></i> AI Event Hub</a>
+        <a href="{{ url_for('home') }}#ai-recommender" class="btn btn-outline-primary btn-sm ms-auto"><i class="fas fa-undo me-1"></i> New Search</a>
+    </div>
+</nav>
+
+<div class="header-section">
+    <div class="container">
+        <h1 class="display-5 fw-bold"><i class="fas fa-robot me-2"></i> Your Personalized Recommendations</h1>
+        <p class="lead mt-3">Showing events matching your interest in: <strong>"{{ interest }}"</strong></p>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <a href="{{ url_for('home') }}" class="btn btn-outline-secondary mb-4"><i class="fas fa-arrow-left me-2"></i> Back to Homepage</a>
+
+    {% if recommended %}
+        <h2 class="mb-4">Found {{ recommended | length }} Event(s):</h2>
+        <div class="row row-cols-1 g-4">
+            {% for event in recommended %}
+            <div class="col">
+                <div class="card recommended-card p-4">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                        <div>
+                            <h4 class="fw-bold text-dark">{{ event.title }}</h4>
+                            <p class="text-muted mb-1"><i class="fas fa-map-marker-alt me-2"></i>Venue: {{ event.venue }}</p>
+                            <p class="text-muted mb-3"><i class="fas fa-calendar-day me-2"></i>Date: {{ format_date(event.date) }}</p>
+                            <p class="mb-0">{{ event.description }}</p>
+                        </div>
+                        <div class="text-end mt-3 mt-md-0">
+                            <a href="{{ event.url }}" target="_blank" class="btn btn-success mt-2"><i class="fas fa-ticket-alt me-1"></i> Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-warning text-center mt-5 p-5">
+            <h4 class="alert-heading fw-bold">No Matches Found! 😞</h4>
+            <p>We couldn't find any upcoming events closely matching your interest in "<strong>{{ interest }}</strong>".</p>
+            <p class="mb-0">Try different keywords (e.g., use "coding" instead of "programming") or check back later!</p>
+        </div>
+    {% endif %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
