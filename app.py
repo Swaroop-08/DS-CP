@@ -9,7 +9,7 @@ import numpy as np # Used for efficient array sorting
 # --- Configuration ---
 app = Flask(__name__)
 app.secret_key = 'your_super_secret_key'
-EVENT_FILE = '/Users/umesh/Downloads/DS-Lab/DSA - CP/AI-Event-Tracker/events_college.json'
+EVENT_FILE = 'events_college.json'
 ADMIN_USER = 'admin'
 ADMIN_PASS = 'password123'
 
