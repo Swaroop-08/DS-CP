@@ -1,9 +1,72 @@
 [
     {
-        "name": "Understanding Data and Data Engineering",
-        "date": "2025-10-29",
-        "category": "Seminar",
-        "organizer": "VIT Pune",
-        "url": "https://www.meet.google.com/nvo-eaje-szk"
+        "title": "Annual Robotics Club Showcase",
+        "description": "Join us for the final showcase of the semester! Teams will demonstrate their autonomous robots and compete in the maze challenge. Keywords: robotics, engineering, automation, AI integration.",
+        "date": "2025-11-20",
+        "venue": "Engineering Lab 305",
+        "url": "https://college.edu/robotics-showcase"
+    },
+    {
+        "title": "Introduction to Python Coding Workshop",
+        "description": "A beginner-friendly session on Python fundamentals. Learn basic data structures like Lists, Dictionaries, and Stacks. Understand loops, functions, and file handling. Perfect for first-year students.",
+        "date": "2025-11-12",
+        "venue": "Computer Science Building, Room 101",
+        "url": "https://college.edu/python-workshop"
+    },
+    {
+        "title": "Advanced Data Structures & Algorithms Seminar",
+        "description": "A deep dive into algorithm design and complex data structures such as Hash Maps, Heaps, Trees, and Graphs. Focus on optimization, space complexity, and practical coding examples.",
+        "date": "2025-12-05",
+        "venue": "Computer Science Building, Room 207",
+        "url": "https://college.edu/dsa-seminar"
+    },
+    {
+        "title": "AI in Automation and Future Tech Discussion",
+        "description": "A cross-disciplinary talk on the role of Artificial Intelligence in automation and future technologies. Includes case studies on machine learning, robotics, and neural networks.",
+        "date": "2025-11-15",
+        "venue": "Auditorium A",
+        "url": "https://college.edu/ai-future-tech"
+    },
+    {
+        "title": "Backend Web Development with Flask",
+        "description": "Hands-on workshop on building RESTful APIs with Python Flask. Learn routing, templating, JSON handling, and CRUD operations. Ideal for students exploring full-stack web development.",
+        "date": "2025-11-10",
+        "venue": "Computer Science Building, Room 102",
+        "url": "https://college.edu/flask-dev"
+    },
+    {
+        "title": "Ethical Hacking and Cybersecurity Talk",
+        "description": "An introductory seminar on cybersecurity, network vulnerabilities, and ethical hacking. Learn penetration testing tools, defense algorithms, and secure coding practices.",
+        "date": "2025-11-14",
+        "venue": "Auditorium C",
+        "url": "https://college.edu/cybersecurity-talk"
+    },
+    {
+        "title": "Internet of Things (IoT) and Embedded Systems Workshop",
+        "description": "Explore how sensors, microcontrollers, and cloud integration enable smart devices. Includes live demo using Arduino and Raspberry Pi for IoT-based automation.",
+        "date": "2025-11-25",
+        "venue": "Innovation Lab 204",
+        "url": "https://college.edu/iot-workshop"
+    },
+    {
+        "title": "Machine Learning Bootcamp",
+        "description": "An intensive bootcamp covering supervised and unsupervised learning, data preprocessing, model training, and evaluation. Work with Scikit-learn and TensorFlow.",
+        "date": "2025-12-02",
+        "venue": "Computer Science Lab 210",
+        "url": "https://college.edu/ml-bootcamp"
+    },
+    {
+        "title": "Data Visualization using Python",
+        "description": "Learn to create interactive dashboards and visualizations using Matplotlib, Seaborn, and Plotly. Understand how to interpret and present data insights effectively.",
+        "date": "2025-12-08",
+        "venue": "Tech Innovation Hall",
+        "url": "https://college.edu/data-viz"
+    },
+    {
+        "title": "Quantum Computing Fundamentals",
+        "description": "A seminar introducing qubits, quantum gates, and algorithms like Grover’s and Shor’s. Learn how quantum mechanics is transforming modern computation.",
+        "date": "2025-12-18",
+        "venue": "Auditorium B",
+        "url": "https://college.edu/quantum-fundamentals"
     }
 ]
